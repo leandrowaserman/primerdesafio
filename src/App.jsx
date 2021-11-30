@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
+import './components*/'
+import NavBar from './components/navbar'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +39,7 @@ function App() {
             Vite Docs
           </a>
         </p>
+        <NavBar />
       </header>
     </div>
   )
