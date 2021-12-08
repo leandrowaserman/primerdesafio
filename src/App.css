@@ -1,0 +1,17 @@
+.seccionProductos{
+    display: flex;
+    flex-flow:row wrap ;
+    justify-content: space-around;
+}
+.divProductos{
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    width: 40vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+header{
+    margin-bottom: 40px;
+}

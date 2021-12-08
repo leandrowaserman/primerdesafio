@@ -2,7 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import NavBar from './components/Navbar'
-import ItemListContainer from './components/ItemListContainer'
+import ItemListContainer from './components/container/ItemListContainer'
 import ItemCount from './components/ItemCount'
 
 const App = () =>{
@@ -10,9 +10,8 @@ const App = () =>{
     <main>
       <header>
         <NavBar />
-        <ItemListContainer mensaje='Este es un mensaje para probar si funciona' />
       </header>
-      <ItemCount stock={10} inicial={0}/>
+      <ItemListContainer/>
     </main>
 
   )
