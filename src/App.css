@@ -4,14 +4,27 @@
     justify-content: space-around;
 }
 .divProductos{
-    background-color: rgb(221, 221, 221);
+    background-color: #fff;
     text-align: center;
-    width: 40vw;
+    width: 20vw;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 5%);
+    border-radius: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
     margin-bottom: 40px;
+    height: 50vh;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.divProductos:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 header{
     margin-bottom: 40px;
+}
+.imgList{
+    width: 20vw;
+}
+body{
+    color: black;
 }
