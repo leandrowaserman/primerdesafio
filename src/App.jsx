@@ -5,15 +5,17 @@ import NavBar from './components/Navbar'
 import ItemListContainer from './components/container/ItemListContainer'
 import ItemDetailContainer from './components/container/ItemDetailContainer'
 
+
 const App = () =>{
   return(
-    <main>
-      <header>
-        <NavBar />
-      </header>
-      <ItemListContainer/>
-      <ItemDetailContainer />
-      </main>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer/>}/>
+        <Route exact path="/categoria/:idCate" element={<ItemListContainer/>}/>
+        <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 export default App

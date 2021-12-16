@@ -3,13 +3,16 @@ import ItemCount from "../ItemCount"
 const ItemDetail = ({item}) =>  {
     return(
         <div className="detail">
-            <hr />
-            <h1>ITEM DETAIL</h1>
-            <h2>{item.categoria} {item.color}</h2>
-            <img src={item.imagen} className="imgDetail"/>
-            <p className="descripcion">{item.descripcion}</p>
-            <p className="stock">Stock disponible: {item.stock}</p>
-            <ItemCount stock={item.stock} inicial={0} />
+            <div className="imgDetailDiv">
+                <img src={item.imagen} className="imgDetail"/>
+            </div>
+            <div className="textoDetail">
+                <h2 className="detailTitulo">{item.categoria} {item.color}</h2>
+                <p className="descripcion">{item.descripcion}</p>
+                <p className="stock">Stock disponible: {item.stock}</p>
+                <ItemCount stock={item.stock} inicial={1}/>
+            </div>
+
         </div>
     )
 }
