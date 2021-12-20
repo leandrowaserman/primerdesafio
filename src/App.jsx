@@ -5,7 +5,6 @@ import NavBar from './components/Navbar'
 import ItemListContainer from './components/container/ItemListContainer'
 import ItemDetailContainer from './components/container/ItemDetailContainer'
 
-
 const App = () =>{
   return(
     <BrowserRouter>

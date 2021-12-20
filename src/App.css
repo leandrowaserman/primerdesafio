@@ -157,3 +157,15 @@ body{
     height: 80vh;
     object-fit: cover;
 }
+.finalizarCompra{
+    background-color: rgb(46, 46, 46);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 25px;   
+    transition: 0.4s; 
+}
+.finalizarCompra:hover{
+    color:rgb(239, 184, 16);
+}
