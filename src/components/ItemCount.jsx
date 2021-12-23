@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
-const ItemCount = ({stock, inicial}) => {
+const ItemCount = ({stock, inicial, onAdd}) => {
     const [count, setCount]= useState(inicial)
     const [comprar, setComprar] =useState(true)
     const sumar = () => {
@@ -17,8 +17,8 @@ const ItemCount = ({stock, inicial}) => {
             setCount(count-1)
         }
     }
-    const onAdd = () => {
-        console.log ("Agregaste ", count, " items")
+    function clicker () {
+        onAdd(count)
         setCount(inicial)
         setComprar(false)
     }
@@ -31,7 +31,7 @@ const ItemCount = ({stock, inicial}) => {
                      <p className="numeroContador">{count}</p>
                      <button onClick={sumar} className="botonContador">+</button>
                 </div>
-                <button onClick={onAdd} className="agregarContador ">Agregar al Carrito</button>
+                <button onClick={clicker} className="agregarContador ">Agregar al Carrito</button>
             </div>
             :
             <Link to ="/cart" className='finalizarCompra'> Finalizar la Compra </Link>
