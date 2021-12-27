@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-import { Link } from 'react-router-dom';
+
 const ItemCount = ({stock, inicial, onAdd}) => {
     const [count, setCount]= useState(inicial)
-    const [comprar, setComprar] =useState(true)
     const sumar = () => {
         if(count==stock){
             return count
@@ -20,24 +19,16 @@ const ItemCount = ({stock, inicial, onAdd}) => {
     function clicker () {
         onAdd(count)
         setCount(inicial)
-        setComprar(false)
     }
     return(
-        <>{
-            comprar===true ?
-            <div className="contadorPadre">
-                <div className="contador">
-                     <button onClick={restar} className="botonContador">-</button>
-                     <p className="numeroContador">{count}</p>
-                     <button onClick={sumar} className="botonContador">+</button>
-                </div>
-                <button onClick={clicker} className="agregarContador ">Agregar al Carrito</button>
+        <div className="contadorPadre">
+            <div className="contador">
+                 <button onClick={restar} className="botonContador">-</button>
+                 <p className="numeroContador">{count}</p>
+                 <button onClick={sumar} className="botonContador">+</button>
             </div>
-            :
-            <Link to ="/cart" className='finalizarCompra'> Finalizar la Compra </Link>
-        }
-       
-        </>
+            <button onClick={clicker} className="agregarContador ">Agregar al Carrito</button>
+        </div>
     )
 }
 export default ItemCount
