@@ -169,3 +169,16 @@ body{
 .finalizarCompra:hover{
     color:rgb(239, 184, 16);
 }
+.cantidadCarrito{
+    color: rgb(239, 184, 16);
+    text-align: center;
+    width: 30px;
+    height: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cartWidget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

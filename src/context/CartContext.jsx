@@ -1,10 +1,10 @@
-import { createContext, useState} from "react";
+import { createContext, useEffect, useState} from "react";
 
 export const CartContext = createContext([])
 
 function CartContextProvider({children}){
     const [cartList, setCartlist] = useState([])
-    
+    useEffect (()=>{},[cartList])
     function addItem (item) {
         const index = cartList.findIndex(i=>i.id===item.id)
         if(index>=0){
@@ -16,6 +16,10 @@ function CartContextProvider({children}){
             setCartlist([...cartList, item])
         }
     }
+    function quantity (){
+        const totalQuantity = cartList.reduce((x, y) => x + y.cantidad, 0)
+        return totalQuantity
+    }
     function clear (){
         setCartlist([])
     }
@@ -23,8 +27,9 @@ function CartContextProvider({children}){
         const index = cartList.filter((i)=>i.id!==item)
         setCartlist(index)
     }
+    
     return(
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, quantity}}>
             {children}
         </CartContext.Provider>
     )
