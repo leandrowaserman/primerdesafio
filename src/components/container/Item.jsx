@@ -6,7 +6,7 @@ const Item = ({item}) => {
         <div key={item.id} className="divProductos">
             <Link to={`/item/${item.id}`} className="linkItem">
             <img src={item.imagen} className="imgList"/>
-            <h1 className="tituloProducto" style={ColorTextoStyle}>{item.categoria} {item.color}</h1>
+            <h1 className="tituloProducto" style={ColorTextoStyle}>{item.nombre}</h1>
             <h2 className="precioList">{item.precio}AR$</h2>
             <h3 className="detallesList">Ver detalles</h3>
             </Link>
