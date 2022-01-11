@@ -8,17 +8,17 @@ function CartContextProvider({children}){
     function addItem (item) {
         const index = cartList.findIndex(i=>i.id===item.id)
         if(index>=0){
-            const oldItem = cartList[index].cantidad
+            const oldItem = cartList[index].quantity
             cartList.splice(index, 1)
-            setCartlist([...cartList, {...item, cantidad: item.cantidad + oldItem}])
+            setCartlist([...cartList, {...item, quantity: item.quantity + oldItem}])
         }
         else{
             setCartlist([...cartList, item])
         }
     }
-    function quantity (){
-        const totalQuantity = cartList.reduce((x, y) => x + y.cantidad, 0)
-        return totalQuantity
+    function totalQuantity (){
+        const newQuantity = cartList.reduce((x, y) => x + y.quantity, 0)
+        return newQuantity
     }
     function clear (){
         setCartlist([])
@@ -28,12 +28,12 @@ function CartContextProvider({children}){
         setCartlist(index)
     }
     function totalPrice (){
-        const total = cartList.reduce((x, y) => x + y.cantidad * y.precio, 0)
+        const total = cartList.reduce((x, y) => x + y.quantity * y.price, 0)
         return  total
     }
     
     return(
-        <CartContext.Provider value={{cartList, addItem, clear, removeItem, quantity, totalPrice}}>
+        <CartContext.Provider value={{cartList, addItem, clear, removeItem, totalQuantity, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

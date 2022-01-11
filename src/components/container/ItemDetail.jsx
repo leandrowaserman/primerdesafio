@@ -8,21 +8,21 @@ const ItemDetail = ({item}) =>  {
     const [buyLink, setBuyLink] = useState(true)
     function onAdd (cant){
         console.log(cant)
-        addItem({...item, cantidad:cant})
+        addItem({...item, quantity:cant})
         setBuyLink(false)
     }
     console.log(cartList)
     return(
         <div className="detail">
             <div className="imgDetailDiv">
-                <img src={item.imagen} className="imgDetail"/>
+                <img src={item.image} className="imgDetail"/>
             </div>
             <div className="textoDetail">
-                <h2 className="detailTitulo">{item.nombre}</h2>
-                <p className="descripcion">{item.descripcion}</p>
+                <h2 className="detailTitulo">{item.name}</h2>
+                <p className="descripcion">{item.description}</p>
                 <p className="stock">Stock disponible: {item.stock}</p>
                 {buyLink ? 
-                <ItemCount stock={item.stock} inicial={1} onAdd={onAdd} />
+                <ItemCount stock={item.stock} onAdd={onAdd} />
                  : 
                  <Link to="/cart" className="finalizarCompra">Ir al Carrito</Link>}
             </div>

@@ -1,15 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, {useState } from "react";
 
-const ItemCount = ({stock, inicial, onAdd}) => {
-    const [count, setCount]= useState(inicial)
-    const sumar = () => {
+const ItemCount = ({stock, onAdd}) => {
+    const [count, setCount]= useState(1)
+    const add = () => {
         if(count==stock){
             return count
         }else{
             setCount(count+1)
         }
     }
-    const restar = () => {
+    const substract = () => {
         if(count==inicial){
             return count
         } else{
@@ -18,14 +18,14 @@ const ItemCount = ({stock, inicial, onAdd}) => {
     }
     function clicker () {
         onAdd(count)
-        setCount(inicial)
+        setCount(1)
     }
     return(
         <div className="contadorPadre">
             <div className="contador">
-                 <button onClick={restar} className="botonContador">-</button>
+                 <button onClick={substract} className="botonContador">-</button>
                  <p className="numeroContador">{count}</p>
-                 <button onClick={sumar} className="botonContador">+</button>
+                 <button onClick={add} className="botonContador">+</button>
             </div>
             <button onClick={clicker} className="agregarContador ">Agregar al Carrito</button>
         </div>

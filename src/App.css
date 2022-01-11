@@ -182,3 +182,18 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
+.imgCart{
+    width: 200px;
+}
+.tabla{
+    width: 300xp;
+    border: 2px #000 double;
+    text-align: center;
+    padding: 0;
+}
+.tablaComprar{
+    width: 100vw;
+    align-items: center;
+    border: 2px #000 double;
+}
