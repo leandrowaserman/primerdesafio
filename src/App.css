@@ -5,11 +5,12 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-.seccionProductos{
+.seccionProductos, .loadingSpin{
     display: flex;
     flex-flow:row wrap ;
     justify-content: space-around;
 }
+
 .divProductos{
     background-color: #fff;
     text-align: center;
@@ -23,6 +24,7 @@ body{
     text-decoration: none;
     color: #000;
 }
+
 .divProductos:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -84,8 +86,6 @@ body{
 .linkNav:hover{
     color: rgb(239, 184, 16);
 }
-
-
 
 
 .detail{
@@ -187,13 +187,140 @@ body{
     width: 200px;
 }
 .tabla{
-    width: 300xp;
-    border: 2px #000 double;
+    width: 300px;
     text-align: center;
-    padding: 0;
+    padding: 0; 
+    margin-bottom: 1px rgb(173, 173, 173) solid;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.removeItem{
+    border: none;
+    background-color: white;
+    color: rgb(158, 4, 4);
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+.removeItem:hover{
+    color: rgb(209, 4, 4);
+    font-size: 40px;
 }
 .tablaComprar{
-    width: 100vw;
+    width: 90vw;
     align-items: center;
-    border: 2px #000 double;
+    border: 2px rgb(173, 173, 173) double;
+    border-radius: 30px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    text-align: center;
+}
+.formSuperior{
+    display: flex;
+    justify-content: center;
+}
+.checkoutForm{
+    width: 50vw;
+    background-color: rgb(236, 234, 234);
+    border-radius: 30px;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 5%);
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+.inputCheckout{
+    width: 35vw;
+    height: 4vh;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+}
+.inputCheckout::placeholder{
+    text-align: center;
+}
+.enviarCompra{
+    margin-right: 30px;
+}
+.quantityStock{
+    background-color: rgb(46, 46, 46);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 25px;   
+}
+.detallesList, .precioList{
+    text-decoration: none;
+    color: rgb(13, 13, 155);
+}
+.sinStock{
+    color: rgb(168, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+}
+.buttonsCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emptyCart, .buyCart{
+    margin: 20px;
+    background-color: rgb(46, 46, 46);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 25px;   
+    transition: 0.4s; 
+}
+.emptyCart:hover{
+    background-color: rgb(168, 4, 4);
+}
+.buyCart:hover{
+    background-color: rgb(239, 184, 16);
+    color: black;
+}
+.totalPrice{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.noItems{
+    text-align: center;
+}
+.emptyh2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px;
+    margin-bottom: 50px;
+}
+.emptyLink{
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #000;
+    padding: 20px;
+    color: rgb(239, 184, 16);
+    border: #000 1px solid;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+.emptyLink:hover{
+    font-size: 30px;
+    color: #000;
+    background-color: rgb(239, 184, 16);
+}
+.idOrderReturn{
+    text-align: center;
+}
+.thanks{
+    font-size: 40px;
+}
+.orderId{
+    font-size: 20px;
+    margin-bottom: 50px;
 }

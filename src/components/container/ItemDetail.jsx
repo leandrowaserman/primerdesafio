@@ -4,14 +4,12 @@ import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import ItemCount from "../ItemCount"
 const ItemDetail = ({item}) =>  {
-    const {cartList, addItem} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
     const [buyLink, setBuyLink] = useState(true)
     function onAdd (cant){
-        console.log(cant)
         addItem({...item, quantity:cant})
         setBuyLink(false)
     }
-    console.log(cartList)
     return(
         <div className="detail">
             <div className="imgDetailDiv">
@@ -22,12 +20,12 @@ const ItemDetail = ({item}) =>  {
                 <p className="descripcion">{item.description}</p>
                 <p className="stock">Stock disponible: {item.stock}</p>
                 {buyLink ? 
-                <ItemCount stock={item.stock} onAdd={onAdd} />
-                 : 
-                 <Link to="/cart" className="finalizarCompra">Ir al Carrito</Link>}
+                <ItemCount stock={item.stock} onAdd={onAdd}/>
+                : 
+                <Link to="/cart" className="finalizarCompra">Ir al Carrito</Link>}
             </div>
-
         </div>
     )
+
 }
 export default ItemDetail

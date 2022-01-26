@@ -7,7 +7,7 @@ function NavBar(){
     const navEstilo = {gridArea: 'nav', fontSize: 20, display:'block', display:'flex',flexFlow:'row nowrap', textAlign:'center'}
     return (
         <div className='navbar'>
-            <h2 style={logoEstilo} className='titulo'> <Link to="/" className='tituloLetras'>Proyecto Final</Link></h2>
+            <h2 style={logoEstilo} className='titulo'> <Link to="/" className='tituloLetras'>Venta Ropa</Link></h2>
             <ul style={navEstilo}>
                 <li className='listaLink'><Link to="/categoria/remera"  className='linkNav'>Remeras</Link></li>
                 <li className='listaLink'><Link to="/categoria/gorra"  className='linkNav'>Gorras</Link></li>
