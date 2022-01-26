@@ -1,6 +1,8 @@
 # Venta Ropa - Leandro Waserman
 Ecommerce de ropa. Trabajo hecho para el proyecto final del curso de React JS de Coder House.
-![WEB](https://ventaropa-reactjs.netlify.app/)
+## Demostración
+
+https://ventaropa-reactjs.netlify.app/
 
 ## Hooks Utilizados
 - useState
@@ -8,11 +10,11 @@ Ecommerce de ropa. Trabajo hecho para el proyecto final del curso de React JS de
 - useContext
 
 ## Dependencias utilizadas
-- Firebase
+- Firebase:
 Se usa para almacenar los datos.
 - React-Router-Dom:
 Se usa para navegar por la página web de forma dinámica. 
-- React-Loader-Spinner
+- React-Loader-Spinner:
 Agrega spinners que luego se utilizan para demostrar que la página esta cargando.
 
 ## ¿Cómo ver el sitio desde tu propia PC?
